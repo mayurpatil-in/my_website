@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { RiMoonLine, RiMenu4Line, RiCloseLine } from "react-icons/ri";
-import "./Navbar.css"; // Or import tailwind styles
+import "../styles/styles.css"; // Or import tailwind styles
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
