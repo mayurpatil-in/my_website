@@ -20,6 +20,64 @@ This is my personal portfolio website built using **Next.js**, designed to showc
 
 ## 📁 Folder Structure
 
+```bash
+my_website/
+├── public/
+│   └── images/
+│
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   ├── about/
+│   │   │   └── page.tsx
+│   │   ├── projects/
+│   │   │   └── page.tsx
+│   │   ├── contact/
+│   │   │   └── page.tsx
+│   │   ├── blog/
+│   │   │   ├── page.tsx
+│   │   │   └── [slug]/
+│   │   │       └── page.tsx
+│   │   └── globals.css
+│   │
+│   ├── components/
+│   │   ├── Navbar.tsx
+│   │   ├── Footer.tsx
+│   │   ├── ProjectCard.tsx
+│   │   └── BlogCard.tsx
+│   │
+│   ├── styles/
+│   │   └── variables.css
+│   │
+│   ├── lib/
+│   │   └── getBlogPosts.ts
+│   │
+│   ├── constants/
+│   │   └── siteMetadata.ts
+│   │
+│   ├── hooks/
+│   │   └── useScroll.ts
+│   │
+│   ├── context/
+│   │   └── ThemeContext.tsx
+│   │
+│   ├── types/
+│   │   └── blog.ts
+│   │
+│   └── content/
+│       └── blog/
+│           ├── blog-1.md
+│           └── blog-2.md
+│
+├── tailwind.config.js
+├── postcss.config.js
+├── next.config.js
+├── tsconfig.json
+└── package.json
+
+```
+
 
 ## Getting Started
 
