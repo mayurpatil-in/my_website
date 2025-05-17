@@ -2,12 +2,13 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { RiMoonLine, RiMenu4Line, RiCloseLine } from "react-icons/ri";
-import "../styles/styles.css"; // Or import tailwind styles
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
   const [theme, setTheme] = useState("light");
+  const pathname = usePathname();
 
   useEffect(() => {
     document.body.className = theme;
@@ -33,22 +34,34 @@ const Navbar = () => {
 
           <ul className="nav__list">
             <li className="nav__item">
-              <a href="#home" onClick={closeNav} className="nav__link active-link">Home</a>
+              <Link href="/" onClick={closeNav} className={`nav__link ${pathname === "/" ? "active-link" : ""}`}>
+                Home
+              </Link>
             </li>
             <li className="nav__item">
-              <a href="#about" onClick={closeNav} className="nav__link">About Me</a>
+              <Link href="/about" onClick={closeNav} className={`nav__link ${pathname === "/about" ? "active-link" : ""}`}>
+                About Me
+              </Link>
             </li>
             <li className="nav__item">
-              <a href="#services" onClick={closeNav} className="nav__link">Services</a>
+              <Link href="/services" onClick={closeNav} className={`nav__link ${pathname === "/services" ? "active-link" : ""}`}>
+                Services
+              </Link>
             </li>
             <li className="nav__item">
-              <a href="#projects" onClick={closeNav} className="nav__link">Projects</a>
+              <Link href="/projects" onClick={closeNav} className={`nav__link ${pathname === "/projects" ? "active-link" : ""}`}>
+                Projects
+              </Link>
             </li>
             <li className="nav__item">
-              <a href="#blogs" onClick={closeNav} className="nav__link">Blogs</a>
+              <Link href="/blogs" onClick={closeNav} className={`nav__link ${pathname === "/blogs" ? "active-link" : ""}`}>
+                Blogs
+              </Link>
             </li>
             <li className="nav__item">
-              <a href="#contact" onClick={closeNav} className="nav__link nav__link-button">Contact Me</a>
+              <Link href="/contact" onClick={closeNav} className={`nav__link nav__link-button ${pathname === "/contact" ? "active-link" : ""}`}>
+                Contact Me
+              </Link>
             </li>
           </ul>
 
